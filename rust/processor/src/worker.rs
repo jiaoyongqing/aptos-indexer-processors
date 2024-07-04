@@ -425,10 +425,10 @@ impl Worker {
                                 PROCESSOR_ERRORS_COUNT
                                     .with_label_values(&[processor_name])
                                     .inc();
-                                panic!(
+                                /*panic!(
                                     "[Parser][T#{}] Error processing '{:}' transactions: {:?}",
                                     task_index, processor_name, e
-                                );
+                                );*/
                             },
                         };
 
