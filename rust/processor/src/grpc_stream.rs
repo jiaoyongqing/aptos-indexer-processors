@@ -651,8 +651,7 @@ pub async fn create_fetcher_loop(
                     stream_address = indexer_grpc_data_service_address.to_string(),
                     "[Parser] Reconnected more than {RECONNECTION_MAX_RETRIES} times. Will not retry.",
                 );
-                // panic!("[Parser] Reconnected more than {RECONNECTION_MAX_RETRIES} times. Will not retry.")
-                reconnection_retries = 0;
+                panic!("[Parser] Reconnected more than {RECONNECTION_MAX_RETRIES} times. Will not retry.")
             }
             reconnection_retries += 1;
             info!(
